@@ -12,3 +12,6 @@ const App = () => (
 );
 
 export default App;
+
+
+// podemos sobrepor o theme do nativebase com o nosso tema customizado
