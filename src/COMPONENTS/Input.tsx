@@ -1,7 +1,7 @@
 import React from "react";
 import { Input as InputNativeBase, IInputProps } from "native-base";
 
-export const Input = ({ ...rest }: IInputProps) => (
+export const Input = ({...rest }: IInputProps) => (
   <InputNativeBase
     bg="gray.700"
     h={14}
@@ -12,9 +12,9 @@ export const Input = ({ ...rest }: IInputProps) => (
     color="#fff"
     placeholderTextColor="gray.300"
     _focus={{
-        borderWidth: 1,
-        borderColor: "green.300",
-        bg: "gray.700"
+      borderWidth: 1,
+      borderColor: "green.300",
+      bg: "gray.700",
     }}
     {...rest}
   />

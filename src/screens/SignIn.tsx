@@ -1,5 +1,5 @@
-import React from "react";
-import { VStack, Heading, Icon, useTheme } from "native-base";
+import React, { useRef } from "react";
+import { VStack, Heading, Icon, useTheme, Text } from "native-base";
 import { Envelope, Key } from "phosphor-react-native";
 
 import Logo from "../ASSETS/logo_primary.svg";
@@ -7,6 +7,8 @@ import { Input } from "../COMPONENTS/Input";
 import { Button } from "../COMPONENTS/Button";
 
 const SignIn = () => {
+  const inputRef = useRef({ email: "", password: "" });
+
   const { colors } = useTheme();
 
   return (
@@ -22,14 +24,23 @@ const SignIn = () => {
         InputLeftElement={
           <Icon as={<Envelope color={colors.gray[300]} />} ml={4} />
         }
+        onChangeText={(email) => (inputRef.current.email = email)}
+        ref={inputRef}
       />
       <Input
         placeholder="Senha"
         InputLeftElement={<Icon as={<Key color={colors.gray[300]} />} ml={4} />}
+        mb={8}
         secureTextEntry
+        onChangeText={(password) => (inputRef.current.password = password)}
+        ref={inputRef}
       />
 
-      <Button title="Entrar" w='full'/>
+      <Button
+        title="Entrar"
+        w="full"
+        onPress={() => console.log(inputRef.current)}
+      />
     </VStack>
   );
 };
