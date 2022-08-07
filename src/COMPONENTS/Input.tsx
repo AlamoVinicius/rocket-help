@@ -1,8 +1,13 @@
 import React from "react";
 import { Input as InputNativeBase, IInputProps } from "native-base";
+import { TextInputProps } from "react-native";
 
-export const Input = ({...rest }: IInputProps) => (
+export const Input: React.ForwardRefRenderFunction<
+  TextInputProps,
+  IInputProps
+> = ({ ...rest }, ref) => (
   <InputNativeBase
+    ref={ref}
     bg="gray.700"
     h={14}
     size="md"

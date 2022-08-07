@@ -27,6 +27,7 @@ const SignIn = () => {
         onChangeText={(email) => (inputRef.current.email = email)}
         ref={inputRef}
       />
+      
       <Input
         placeholder="Senha"
         InputLeftElement={<Icon as={<Key color={colors.gray[300]} />} ml={4} />}
