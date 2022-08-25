@@ -18,7 +18,7 @@ const SignIn = () => {
         Acesse sua conta
       </Heading>
 
-      <Input
+      <Input 
         placeholder="E-mail"
         mb={4}
         InputLeftElement={
