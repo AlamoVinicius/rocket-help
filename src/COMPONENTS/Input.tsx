@@ -2,11 +2,9 @@ import React, { forwardRef } from "react";
 import { Input as InputNativeBase, IInputProps } from "native-base";
 import { TextInputProps } from "react-native";
 
-type myProps = {
- 
-};
+type myProps = {};
 
-export const Input = forwardRef<myProps, IInputProps>(({ ref, ...rest }) => {
+export const Input = forwardRef<myProps, IInputProps>((props, ref) => {
   return (
     <InputNativeBase
       ref={ref}
@@ -23,7 +21,7 @@ export const Input = forwardRef<myProps, IInputProps>(({ ref, ...rest }) => {
         borderColor: "green.300",
         bg: "gray.700",
       }}
-      {...rest}
+      {...props}
     />
   );
 });

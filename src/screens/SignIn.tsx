@@ -18,7 +18,7 @@ const SignIn = () => {
         Acesse sua conta
       </Heading>
 
-      <Input 
+      <Input
         placeholder="E-mail"
         mb={4}
         InputLeftElement={
@@ -27,7 +27,7 @@ const SignIn = () => {
         onChangeText={(email) => (inputRef.current.email = email)}
         ref={inputRef}
       />
-      
+
       <Input
         placeholder="Senha"
         InputLeftElement={<Icon as={<Key color={colors.gray[300]} />} ml={4} />}
